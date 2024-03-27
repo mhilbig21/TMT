@@ -1,0 +1,98 @@
+Sun Mar 24 23:41:36 MDT 2024
+python3 -m venv .venv 			## make a virtual env
+rm -r TrackMan_Training			## how to remove (delete) a directory (-r means recursive, ie it will remove every subdirectory as well)
+
+mkdir TMT				## how to make a directory
+touch terminal_output.txt		## how to create a blank file (nano file_name will make one that will be edited in nano word processor)
+
+echo "$(date)" >> terminal_log.txt	## how to print something to a file
+history -n 400 | grep 'rm \|mkdir\|date'## how to get your whole history (any number after -n gets the whole history for some reason) (grep = global regular expression print. finds a command with a string specified directly after it. choose multiple strings with 'string1\|string2\|string3'. Use -v to find stuff without that string in it)
+
+history -n 400 | tail -n 12 >> terminal_log.txt	## gets the last 12 commands with tail and appends them to the file with >> (> just overwrites the file)
+
+Mon Mar 25 13:41:32 MDT 2024
+pip freeze >> requirements.txt      ## save everything installed in requirements.txt (probably only works with pip installs though so stick with pip or conda and don't change maybe?)
+cat requirements.txt                ## show what is in the requirements.txt file
+pip install -r requirements.txt     ## can install all dependencies easily with requirements.txt
+django-admin                        ## list all the commands you can perform with django
+
+200 means "okay we got the file, no problems" (specific to each web browser)
+304 means "we actually already have this one downloaded (cached)" (specific to each web browswer)
+
+once git is installed, you don't need to do it again. It is installed at the sytem
+level and operates at the system level, so it is accessible from any environment  
+
+Tue Mar 26 18:52:50 MDT 2024
+git config --global user.name "Mitchell Hilbig" ## set the global username and email ?? what does global do, and config, and why need a user name ??
+git config --global user.email "mitchell.hilbig@gmail.com
+git config --global init.defaultBranch main     ## configure the default branch in git 
+
+ChatGPT on global:
+--global: This flag indicates that the configuration being set applies 
+globally to your user account. Global configurations are stored in a 
+file that applies to all Git repositories on your system. 
+This means that the specified configuration will be applied to all 
+repositories unless overridden by a local configuration within a 
+specific repository.
+
+ChatGPT tips on terminal commands
+Navigation:
+
+cd: Change directory.
+pwd: Print working directory.
+ls: List directory contents.
+mkdir: Make directory.
+rmdir: Remove directory.
+
+File Operations:
+
+cp: Copy files and directories.
+mv: Move or rename files and directories.
+rm: Remove files or directories.
+touch: Create an empty file.
+cat: Concatenate and display file contents.
+less or more: Display file contents with paging.
+head: Display the beginning of a file.
+tail: Display the end of a file.
+Text Manipulation:
+
+grep: Search text using patterns.
+sed: Stream editor for filtering and transforming text.
+awk: Pattern scanning and processing language.
+
+Process Management:
+
+ps: Report a snapshot of the current processes.
+kill: Terminate processes.
+top: Display and manage the system processes.
+System Information:
+
+uname: Print system information.
+df: Display disk space usage.
+du: Estimate file space usage.
+free: Display amount of free and used memory in the system.
+
+Networking:
+
+ping: Send ICMP echo requests to network hosts.
+ifconfig (or ip command): Configure network interfaces.
+ssh: Open SSH client connection to remote hosts.
+
+User Management:
+
+sudo: Execute a command with superuser privileges.
+su: Switch user or become another user.
+passwd: Change user password.
+useradd: Add a new user.
+userdel: Delete a user.
+
+Package Management:
+
+apt (for Debian-based systems) or yum (for Red Hat-based systems): Package management commands for installing, updating, and removing software packages.
+Shell Built-in Commands:
+
+echo: Display a line of text.
+export: Set an environment variable.
+history: Display the command history.
+source or .: Execute commands from a file in the current shell session.
+
